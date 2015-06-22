@@ -35,7 +35,7 @@ def send_message(recipient, body, attach_selected_files):
 			end tell
 		end using terms from
 		
-		"""%(set_selected_files, asquote(buddy), asquote(body))
+		"""%(set_selected_files, asquote(buddy), asquote(body.encode('utf8')))
 		print script
 		asrun(script)
 
